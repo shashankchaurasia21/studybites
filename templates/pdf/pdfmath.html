@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}PDF_math{% endblock title %}
+{% load static %}
+{% block body %}
+<div class="container my-3 ">
+    <h1><center> All Maths PDF avilable hear ! </center>  </h1> <br>
+    {% for pdftute in pdf %}
+        <div class="col-md-12">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250 bg-success">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-dark">Tutorial By {{pdftute.author}}</strong>
+                    <h3 class="mb-0">
+                        <a class="text-dark" href="/media/media/{{pdftute.upload}}">{{pdftute.title | upper}}</a>
+                    </h3>
+                    <div class=" mb-1 text-alert">{{pdftute.timeStamp}}</div>
+                    <p class="card-text mb-auto">{{pdftute.description}}</p>
+                    <p class="lead my-4">
+                        <a class="btn btn-outline-danger btn-lg " href="/media/media/{{ pdftute.upload }}" download role="button">Download PDF</a>
+                        
+                    </p>
+                </div>
+            </div>
+    {% endfor %}
+{% endblock body %}

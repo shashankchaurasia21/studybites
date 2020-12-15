@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}PDF_english{% endblock title %}
+{% load static %}
+{% block body %}
+<div class="container my-3 ">
+    <h1><center> All English PDF avilable hear ! </center>  </h1> <br>
+    {% for Pdfenglish in pdf %}
+        <div class="col-md-12">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250 bg-success">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-dark">Tutorial By {{Pdfenglish.author}}</strong>
+                    <h3 class="mb-0">
+                        <a class="text-dark" href="/media/media/{{Pdfenglish.upload}}">{{Pdfenglish.title | upper}}</a>
+                    </h3>
+                    <div class=" mb-1 text-alert">{{Pdfenglish.timeStamp}}</div>
+                    <p class="card-text mb-auto">{{Pdfenglish.description}}</p>
+                    <p class="lead my-4">
+                        <a class="btn btn-outline-danger btn-lg " href="/media/media/{{ Pdfenglish.upload }}" download role="button">Download PDF</a>
+                        
+                    </p>
+                </div>
+            </div>
+    {% endfor %}
+{% endblock body %}

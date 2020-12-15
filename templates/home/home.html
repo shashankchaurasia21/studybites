@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title%}Home{% endblock title %}
+{% block  homeactive %} active {% endblock homeactive %}
+{% block body %}
+    <div class="container my-3 ">
+      <div class="jumbotron - bg-success">
+        <h1 class="display-4 ">
+          <center>Hello Students!
+        </h1>
+        <h2 class="display-4">
+          <center>Welcome to Study bites with Ashu <h2>
+              <p class="display-10"> This Website give to you PDF file on your Course and Videos for free so improve your
+                knowledge...</p>
+              <hr class="my-4">
+              <h5 class="display-15"> If you are more read Latest updates or information so click to latest updates button if any isue
+                about any topics in our youtube videos then go to contact page and describe your isue and also u can comment me...
+                Thankyou ! </h5>
+              <p class="lead my-4">
+                <a class="btn btn-outline-danger btn-lg" href="/blog" role="button">Check Latest Updates</a>
+              </p>
+      </div>
+      <!---subject card-->
+
+    <center>  <div class="row my-5">
+        <div class="col-lg-4 bg-outline-info">
+          <img class="rounded-circle"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+            alt="Generic placeholder image" width="140" height="140">
+          <h2>Maths Tutorial PDF !</h2>
+          <p>All Maths PDF avilable hear if any problem our tutorials you can go to contact page and conatact me i will try to solved your problems.</p>
+          <p><a class="btn btn-outline-info" href="/pdfdownload/pdfmath" role="button">View details »</a></p>
+        </div><!-- /.col-lg-1 -->
+        <div class="col-lg-4">
+          <img class="rounded-circle"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+            alt="Generic placeholder image" width="140" height="140">
+          <h2>English Tutorial PDF !</h2>
+          <p>All English PDF avilable hear if any problem our tutorials you can go to contact page and conatact me i will try to solved your problems.
+          </p>
+          <p><a class="btn btn-outline-info" href="/pdfenglish/pdfenglish" role="button">View details »</a></p>
+        </div><!-- /.col-lg-2 -->
+        <div class="col-lg-4">
+          <img class="rounded-circle"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+            alt="Generic placeholder image" width="140" height="140">
+          <h2>ALL Competative Exams PDF ! </h2>
+          <p>All Competative Exams PDF avilable hear if any problem our tutorials you can go to contact page and conatact me i will try to solved your problems.</p>
+          <p><a class="btn btn-outline-info" href="/pdfallcomp/pdfallcomp" role="button">View details »</a></p>
+        </div>
+        <!-- /.col-lg-3 -->
+      </div>
+    </center>
+</div>{% endblock body %}

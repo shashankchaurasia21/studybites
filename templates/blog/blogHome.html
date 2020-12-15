@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title%}Latest Updates {% endblock title %}
+{% block blogHomeactive %} active {% endblock blogHomeactive %}
+{% block body %}
+<div class="container my-3 ">
+    <h1><center> New Updates for Students ! </center>  </h1> <br>
+    {% for post in allposts %}
+        <div class="col-md-12">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250 bg-secondary">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-success">Tutorial By {{post.author}}</strong>
+                    <h3 class="mb-0">
+                        <a class="text-dark" href="#">{{post.title | upper}}</a>
+                    </h3>
+                    <div class="mb-1 text-muted">{{post.timeStamp}}</div>
+                    <p class="card-text mb-auto">{{post.content | truncatechars:500}}</p>
+                    <p class="lead my-4">
+                        <a class="btn btn-outline-danger btn-lg " href="/blog/{{post.slug}}" role="button"> Continue..</a>
+                    </p>
+                </div>
+            </div>
+    {% endfor %}
+{% endblock body %}
